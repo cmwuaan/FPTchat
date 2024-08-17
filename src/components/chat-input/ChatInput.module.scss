@@ -1,0 +1,67 @@
+@use "../../styles/variables" as *;
+
+.InputContainer {
+    background-color: $white;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 0 calc((100% - 800px) / 2) 20px calc((100% - 800px) / 2);
+}
+
+.InputWrapper {
+    display: flex;
+    height: 52px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lighten($orange-100, 6%);
+    border-radius: 200px;
+    padding: 16px 8px 16px 8px;
+    gap: 14px;
+}
+.Button {
+    color: $color-primary;
+    font-size: 1.4em;
+    outline: none;
+    border: none;
+    background-color: $orange-200;
+    border-radius: 100%;
+
+    &:disabled {
+        color: $gray-600;
+        background-color: $gray-400;
+    }
+
+    &:hover {
+        background-color: $orange-300;
+    }
+
+    .IconButton {
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+}
+
+.Input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+
+    &::placeholder {
+        color: $gray-600;
+    }
+}
+
+.QuickChat {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 16px;
+    margin-bottom: 12px;
+}
