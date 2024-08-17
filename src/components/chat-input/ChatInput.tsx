@@ -7,13 +7,17 @@ import { quickQuestions } from '../../service/data';
 import { ConditionalComponent } from '../conditional-component/ConditionalComponent';
 import { useAtomValue } from 'jotai';
 import { isUserAskedAtom } from '../../utils/atom';
+import { ConversionType } from '../../service/types';
 
 interface Props {
   isLoading?: boolean;
   searchValue: string;
+  conversionList: ConversionType[];
   onChangeInput: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onKeyDownEnter: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   onUpdateConversionList: () => void;
+  setSearchValue: (value: string) => void;
+  setConversionList: React.Dispatch<React.SetStateAction<ConversionType[]>>;
 }
 
 export const ChatInput: FC<Props> = ({
@@ -22,6 +26,7 @@ export const ChatInput: FC<Props> = ({
   onChangeInput,
   onKeyDownEnter,
   onUpdateConversionList,
+  setConversionList,
 }) => {
   const isUserAsked = useAtomValue(isUserAskedAtom);
 
@@ -31,7 +36,14 @@ export const ChatInput: FC<Props> = ({
         <ConditionalComponent condition={!isUserAsked}>
           <div className={Classes.QuickChat}>
             {quickQuestions.map((quickQuestion, index) => (
-              <QuickChat key={index} title={quickQuestion.title} description={quickQuestion.description} />
+              <QuickChat
+                key={index}
+                title={quickQuestion.title}
+                description={quickQuestion.description}
+                onChangeInput={onChangeInput}
+                onUpdateConversionList={onUpdateConversionList}
+                setConversionList={setConversionList}
+              />
             ))}
           </div>
         </ConditionalComponent>

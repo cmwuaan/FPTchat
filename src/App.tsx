@@ -7,8 +7,16 @@ import { ChatInput } from './components/chat-input/ChatInput';
 import { useHandleChat } from './hooks/useHandleChat';
 
 const App: React.FC = () => {
-  const { searchValue, conversionList, isSendingQuestion, onChangeInput, onKeyDownEnter, onUpdateConversionList } =
-    useHandleChat();
+  const {
+    searchValue,
+    conversionList,
+    isSendingQuestion,
+    setSearchValue,
+    setConversionList,
+    onChangeInput,
+    onKeyDownEnter,
+    onUpdateConversionList,
+  } = useHandleChat();
 
   return (
     <MainLayout>
@@ -16,10 +24,13 @@ const App: React.FC = () => {
         <Chat conversionList={conversionList} />
         <ChatInput
           searchValue={searchValue}
+          setSearchValue={setSearchValue}
+          conversionList={conversionList}
           isLoading={isSendingQuestion}
           onChangeInput={onChangeInput}
           onKeyDownEnter={onKeyDownEnter}
           onUpdateConversionList={onUpdateConversionList}
+          setConversionList={setConversionList}
         />
       </main>
     </MainLayout>

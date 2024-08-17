@@ -6,7 +6,7 @@ import { ThemeButton } from './theme-button/ThemeButton';
 import { LanguageButton } from './language-button/LanguageButton';
 
 export const Header: React.FC = () => {
-  const isAuthenticated = true;
+  const isAuthenticated = false;
   return (
     <header className={Classes.Header}>
       <Logo />

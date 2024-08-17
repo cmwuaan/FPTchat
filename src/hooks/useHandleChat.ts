@@ -11,7 +11,7 @@ export const useHandleChat = () => {
   const [conversionList, setConversionList] = useState<ConversionType[]>([
     {
       isBot: true,
-      text: 'Hello, how can I help you?',
+      text: 'Bạn đang thắc mắc điều gì?',
     },
   ]);
   const { isMutating: isSendingQuestion, trigger: getAnswerDataTrigger } = useSendGetRequest<

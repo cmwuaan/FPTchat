@@ -3,16 +3,16 @@ import { HistoryQuestions, QuickQuestion } from './types';
 export const quickQuestions: QuickQuestion[] = [
   {
     title: 'Học phí',
-    description: 'Học phí của chương trình đào tạo tại FPT là bao nhiêu?',
+    description: 'Học phí các chuyên ngành năm 2024',
   },
-  {
-    title: 'Học bổng',
-    description: 'FPT',
-  },
-  { title: 'Điểm chuẩn', description: 'Điểm chuẩn vào học viện FPT là bao nhiêu?' },
+  { title: 'Điểm trung bình', description: 'Cách tính điểm trung bình' },
   {
     title: 'Danh sách ngành',
-    description: 'Danh sách ngành học tại FPT bao gồm những ngành nào?',
+    description: 'Khối đào tạo ngành học của FPT',
+  },
+  {
+    title: 'Địa chỉ',
+    description: 'Địa chỉ đại học FPT Quy Nhơn',
   },
 ];
 

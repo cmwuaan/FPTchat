@@ -32,13 +32,23 @@ export const ChatBubble: FC<Props> = ({ data, className, speed = 50, type, isLoa
     }
   }, [currentIndex]);
 
+  const formatCurrentText = (text: string) => {
+    let formattedText = text.replace(/\\n/g, '\n');
+
+    formattedText = formattedText.replace(/<br\s*\/?>/gi, '\n');
+
+    return formattedText;
+  };
+
   return (
     <>
       <ConditionalComponent condition={isLoading}>
         <div className={classNames(Classes.ChatBubble, className)}>Answering...</div>
       </ConditionalComponent>
       <ConditionalComponent condition={!isLoading}>
-        <ReactMarkdown className={classNames(Classes.ChatBubble, className)}>{currentText}</ReactMarkdown>
+        <ReactMarkdown className={classNames(Classes.ChatBubble, className)}>
+          {formatCurrentText(currentText)}
+        </ReactMarkdown>
       </ConditionalComponent>
     </>
   );
