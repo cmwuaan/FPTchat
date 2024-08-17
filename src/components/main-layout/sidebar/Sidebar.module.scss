@@ -1,0 +1,23 @@
+@import "../../../styles/variables.scss";
+
+.Sidebar {
+    width: 260px;
+    padding: 0.75rem 0.75rem;
+    border-right: 1px solid;
+    border-color: $color-border;
+    flex-shrink: 0;
+    overflow-x: hidden;
+
+    .SidebarHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .SidebarActionIcon {
+            font-size: 30px;
+            cursor: pointer;
+            padding: 0 0.2rem;
+            color: $color-primary;
+        }
+    }
+}

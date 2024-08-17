@@ -1,0 +1,48 @@
+.Container {
+    position: relative;
+    display: inline-block;
+}
+
+.LanguageButton {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.LanguageIcon {
+    margin-right: 8px;
+}
+
+.DropdownIcon {
+    margin-left: 8px;
+}
+
+.DropdownMenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.DropdownMenu li {
+    padding: 8px 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+.DropdownMenu li:hover {
+    background-color: #f0f0f0;
+}

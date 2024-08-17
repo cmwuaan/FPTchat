@@ -1,0 +1,43 @@
+.ChatWrapper {
+    height: 100%;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.ChatContent {
+    width: 100%;
+    padding: 0 calc((100% - 800px) / 2);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+.LogoWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.LogoImage {
+    width: 66px;
+    height: 80px;
+    display: block;
+}
+
+.Loader {
+    font-size: 1.2em;
+    color: #007bff;
+    text-align: center;
+    padding: 1em;
+}
+
+.Error {
+    font-size: 1.2em;
+    color: red;
+    text-align: center;
+    padding: 1em;
+}

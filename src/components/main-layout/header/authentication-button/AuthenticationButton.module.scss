@@ -1,0 +1,38 @@
+@use "../../../../styles/variables" as *;
+
+.ButtonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.Button {
+    background-color: $color-primary;
+    border: none;
+    border-radius: 24px;
+    color: $white;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.3s,
+        color 0.3s;
+
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
+
+    &.Outline {
+        background-color: transparent;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+
+        &:hover {
+            background-color: lighten($color-primary, 40%);
+        }
+    }
+}
